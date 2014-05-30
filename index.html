@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="OLIVER BLOHM - PHOTOGRAPHY">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -15,6 +15,7 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="bowser_components/flexslider/flexslider.css">
     <!-- endbuild -->
   </head>
   <body ng-app="newOliverApp">
@@ -23,6 +24,18 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <h1 class="contact">
+        <a href="http://www.oliverblohm.com">  <img src="img/oliverblohm_logo_1.jpg" border="0" /> </a>
+    </h1>
+
+    <div class="nav_contact">
+
+        <a href="#/index.htm">Start</a>
+        /
+        <a href="#/publications.htm">Publications</a>
+        /
+        <a href="#/contact.htm">Contact</a>
+    </div>
     <div class="container" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -32,7 +45,7 @@
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-29115138-1');
        ga('send', 'pageview');
     </script>
 
@@ -40,7 +53,10 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/flexslider/jquery.flexslider.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
