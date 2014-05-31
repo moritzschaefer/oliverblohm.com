@@ -43,7 +43,6 @@ h1 {
 	margin-top:4.2em;
 	width: 180px;
 	height: 34px;
-	background: url("../img/ob_logo_1.jpg") no-repeat;
 }
 h1.contact {
 	margin-top: 1em;
@@ -203,6 +202,11 @@ p.contact_start {
 
 /* --- Main sections
 -------------------------------------------------------------------------------- */
+
+.flexslider {
+  border: 0px;
+  margin: 0 0 0 0;
+}
 
 .gallery {
 	margin: 0 auto;
