@@ -1,0 +1,22 @@
+<a ng-href="{{link}}" target="_blank" ng-bind="title"></a>
+<div class="gallery">
+  <div class="flexslider">
+    <div class="slides-control">
+    <a href="" ng-click="prevSlideshow()" class="prev">
+    <
+      </a>
+      <span class="current_pos">1</span>
+      /
+      <span ng-bind="num" class="total"></span>
+        <a href="" ng-click="nextSlideshow()" class="next">
+        >
+      </a>
+    </div>
+
+        <ul ng-click="nextSlideshow()" class="slides" slideshow="false" control-nav="false" direction-nav="false" flex-slider slide="element in elements">
+            <li><img ng-src="{{element}}" alt="all rights reserved by oliver blohm"></li>
+        </ul>
+  </div>
+  <a ng-href="{{link}}" target="_blank"><h4>more</h4></a>
+<h5>---------------------------------------</h5>
+</div>

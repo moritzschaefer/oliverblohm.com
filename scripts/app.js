@@ -20,11 +20,11 @@ angular
       })
       .when('/acquire', {
         templateUrl: 'views/acquire.html',
-        controller: 'PublicationsCtrl'
+        controller: 'AcquireCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'PublicationsCtrl'
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -33,7 +33,6 @@ angular
   .directive('gallery', function() {
       return {
           restrict: 'A',
-
           templateUrl: 'views/gallery.html',
           scope: {
               gallery: '='
@@ -49,4 +48,18 @@ angular
 
           }
       };
-  });
+  })
+  .directive('shopImage', function() {
+      return {
+          rescrict: 'A',
+          templateUrl: 'views/shop-image.html',
+          scope: {
+              shopImage: '='
+          },
+          link: function(scope, element, attrs) {
+
+
+          }
+      }
+
+  })
