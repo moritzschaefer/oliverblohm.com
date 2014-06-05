@@ -49,17 +49,21 @@ angular
           }
       };
   })
-  .directive('shopImage', function() {
-      return {
-          rescrict: 'A',
-          templateUrl: 'views/shop-image.html',
-          scope: {
-              shopImage: '='
-          },
-          link: function(scope, element, attrs) {
+  .directive('shopImage', ['$cookies', function(cookies) {
+          return {
+              rescrict: 'A',
+              templateUrl: 'views/shop-image.html',
+              transclude: true,
+              scope: {
+                  shopImage: '=',
+              },
+              link: function(scope, element, attrs) {
+                  scope.addToBasket = function() {
+                      cookies.basket= '["uiae"]';
+                  };
 
 
+              }
           }
-      }
 
-  })
+  }]);
