@@ -3,9 +3,9 @@
 angular.module('newOliverApp')
 .factory('requests', ['$cookies', function(cookies) {
         var cookieToArray = function() {
-            if(cookies.requests === undefined)
+            if(typeof cookies.requests === "undefined")
                 return [];
-            JSON.parse(cookies.requests);
+            return JSON.parse(cookies.requests);
         }
         var arrayToCookie = function(arr) {
             cookies.requests = JSON.stringify(arr);

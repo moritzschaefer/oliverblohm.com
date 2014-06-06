@@ -1,16 +1,18 @@
-<img ng-src="{{image}}" alt="all rights reserved by oliver blohm"/ id="acquire-detail-image">
-<div id="acquire-detail-text">
-    <h2 ng-bind="title"></h2>
-    <p ng-bind="description"></p>
-    <ul>
-        <li ng-repeat="option in requestOptions">
-            <p ng-bind="option.title"></p>
-            <p>--------------------</p>
-            <p ng-bind="option.description"></p>
-            <p>---</p>
-            <p class="price" ng-bind="option.price"></p>
-            <p>---</p>
-            <a ng-click="addRequest(id, $id)">ADD TO REQUEST</a>
-        </li>
-    </ul>
+<div class="acquire-detail-container">
+    <img ng-src="{{image}}" alt="all rights reserved by oliver blohm"/ id="acquire-detail-image">
+    <div id="acquire-detail-text">
+        <h2 ng-bind="title"></h2>
+        <p ng-bind="description"></p>
+        <ul>
+            <li ng-repeat="option in requestOptions">
+                <p ng-bind="option.title"></p>
+                <p>--------------------</p>
+                <p ng-bind="option.description"></p>
+                <p>---</p>
+                <p class="price" ng-bind="option.price"></p>
+                <p>---</p>
+                <a href ng-click="addRequest(id, $id)">ADD TO REQUEST</a>
+            </li>
+        </ul>
+    </div>
 </div>

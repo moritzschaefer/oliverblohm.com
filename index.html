@@ -38,9 +38,9 @@
         /
         <a href="#/contact">Contact</a>
     </div>
-    <div class="basket-button" ng-controller="BasketCtrl" ng-show="basket.length > 0">
+    <a ng-href="#/requests" class="basket-button" ng-controller="BasketCtrl" ng-show="basket.length > 0">
         REQUESTS - {{basket.length}}
-    </div>
+    </a>
 
     <div class="container" ng-view=""></div>
 
