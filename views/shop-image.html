@@ -1,5 +1,7 @@
 <div class="shop-image">
-    <img ng-src="{{shopImage.image}}" alt="all rights reserved by oliver blohm" ng-click="addToBasket()"/>
+    <a ng-href="#/acquire-detail/{{id}}">
+        <img ng-src="{{shopImage.image}}" alt="all rights reserved by oliver blohm"/>
+    </a>
     <p ng-bind="shopImage.title"></p>
     <p ng-bind="shopImage.price"></p>
 </div>

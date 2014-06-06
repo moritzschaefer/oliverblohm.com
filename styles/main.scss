@@ -295,5 +295,9 @@ ul.acquire-container {
   margin-left: 550px;
   top: 0px;
   padding: 20px;
-
+}
+/* acquire detail image */
+#acquire-detail-image, #acquire-detail-text {
+  display: inline-block;
+  vertical-align: top;
 }
