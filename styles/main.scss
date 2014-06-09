@@ -312,13 +312,103 @@ ul.acquire-container {
   background-color: black;
   color: white;
   position: absolute;
-  left:50%;
-  margin-left: 550px;
+  left:80%;
   top: 0px;
   padding: 20px;
+}
+.basket-button:hover {
+  color: white;
+  text-decoration: underline;
+
 }
 /* acquire detail image */
 #acquire-detail-image, #acquire-detail-text {
   display: inline-block;
   vertical-align: top;
 }
+/* requests */
+#requests-content {
+  width: 850px;
+  margin: 0 auto;
+  h2 {
+    margin-bottom: 60px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+        vertical-align: top;
+        margin-top: 54px;
+      }
+      a:hover {
+        text-decoration: line-through;
+      }
+      div {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        h2 {
+          margin: 0 0 5px 0;
+          text-align: left;
+        }
+      }
+      img {
+        height: 120px;
+      }
+    }
+  }
+  ul > li > a,  form > div > p {
+    width: 90px;
+    display: inline-block;
+    margin-right: 18px;
+    vertical-align: top;
+  }
+  form {
+    > div > p > span {
+      float: right;
+    }
+    input[type="email"], textarea, input[type="text"] {
+      width: 720px;
+      background-color: black;
+      color: white;
+      font-family: Courier New, monospace;
+      padding: 2px;
+    }
+    textarea {
+      //height: 90px;
+    }
+    button  {
+      margin-left: 117px;
+      button: none;
+    }
+  }
+  > p {
+    margin: 40px 0 40px 117px;
+  }
+}
+.price {
+  font-weight: 700;
+}
+#sent-overlay {
+  top: 200px;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  opacity: 0.8;
+  min-height: 500px;
+
+  > div {
+    padding-top: 100px;
+    text-align: center;
+    width: 850px;
+    margin: 0 auto;
+    p {
+      color: black;
+      font-weight: 700;
+    }
+  }
+}
+

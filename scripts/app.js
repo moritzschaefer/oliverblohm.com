@@ -26,6 +26,10 @@ angular
             templateUrl: 'views/acquire-detail.html',
             controller: 'AcquireDetailCtrl'
     })
+    .when('/requests', {
+            templateUrl: 'views/requests.html',
+            controller: 'RequestsCtrl'
+    })
     .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'MainCtrl'

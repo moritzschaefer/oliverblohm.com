@@ -12,21 +12,20 @@ angular.module('newOliverApp')
         }
         return {
             addRequest: function(id, requestOption) {
-                var arr = cookieToArray();
-                arr.push({id: id, requestOption: requestOption});
-                arrayToCookie(arr);
+                this.requests.push({id: id, requestOption: requestOption});
+                arrayToCookie(this.requests);
+            },
+            deleteRequest: function(index) {
+                this.requests.splice(index, 1);
+                arrayToCookie(this.requests);
             },
             isRequested: function(id, requestOption) {
-                var arr = cookieToArray();
-                var found = arr.filter(function(obj) {
+                var found = this.requests.filter(function(obj) {
                     return obj.id === id && obj.requestOption === requestOption;
                 });
                 return found !== undefined;
             },
-            allRequests: function() {
-                return cookieToArray();
-
-            },
+            requests : cookieToArray(),
             requestOptions: [
                 {
                     title: 'uiae',
