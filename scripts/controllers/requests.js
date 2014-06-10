@@ -28,7 +28,7 @@ angular.module('newOliverApp')
             var data = {email: $scope.email, name: $scope.name, message: $scope.message, requests: requestsText.join("\n")};
             $scope.showOverlay = true;
             // send email
-            $http({method: 'POST', url: '/mailer.php', data: data});
+            $http({method: 'POST', url: '/backend/mailer.php', data: data});
             // delete all requests
         }
 }]);
