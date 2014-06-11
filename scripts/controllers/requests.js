@@ -23,8 +23,7 @@ angular.module('newOliverApp')
         $scope.sendRequest = function() {
             // prepare data
             var requestsTexts = requests.requests.map(function (element, index) {
-                return
-                requests.selection[element.id].title + "\n" +
+                return requests.selection[element.id].title + "\n" +
                     requests.requestOptions[element.requestOption].description + "\n" +
                     requests.requestOptions[element.requestOption].price + "\n";
             });
