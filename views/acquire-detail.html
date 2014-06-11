@@ -5,7 +5,7 @@
         <p ng-bind="description"></p>
         <ul>
             <li ng-repeat="option in requestOptions">
-                <p ng-bind="option.title"></p>
+                <p class="title" ng-bind="option.title"></p>
                 <p>--------------------</p>
                 <p ng-bind="option.description"></p>
                 <p>---</p>
@@ -14,5 +14,16 @@
                 <a href ng-click="addRequest(id, $index)">ADD TO REQUEST</a>
             </li>
         </ul>
+    </div>
+</div>
+
+<div id="added-overlay" ng-show="showOverlay">
+    <div>
+        <img ng-src="{{image}}" alt="all rights reserved by oliver blohm" />
+        <div>
+            <p class="title" ng-bind="title"></p>
+            <p ng-bind="chosen"></p>
+            <p class="title">IS NOW ADDED TO YOUR LIST OF REQUESTS</p>
+        </div>
     </div>
 </div>

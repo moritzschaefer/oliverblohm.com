@@ -5,6 +5,7 @@ angular
         'ngCookies',
         'ngResource',
         'ngSanitize',
+        'ngAnimate',
         'ngRoute',
         'angular-flexslider'
 ])

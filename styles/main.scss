@@ -316,10 +316,13 @@ ul.acquire-container {
   top: 0px;
   padding: 20px;
 }
+.basket-button:visited {
+  color: white;
+  text-decoration: none;
+}
 .basket-button:hover {
   color: white;
   text-decoration: underline;
-
 }
 /* acquire detail image */
 #acquire-detail-image, #acquire-detail-text {
@@ -328,16 +331,21 @@ ul.acquire-container {
 }
 /* requests */
 #requests-content {
-  width: 850px;
+  width: 750px;
   margin: 0 auto;
   h2 {
     margin-bottom: 60px;
+    font-weight: 700;
   }
   ul {
     margin: 0;
     padding: 0;
     li {
-      display: inline-block;
+      display: block;
+      margin-bottom: 20px;
+      > a, > img, > div {
+        display: inline-block;
+      }
       a {
         text-decoration: none;
         vertical-align: top;
@@ -371,7 +379,7 @@ ul.acquire-container {
       float: right;
     }
     input[type="email"], textarea, input[type="text"] {
-      width: 720px;
+      width: 620px;
       background-color: black;
       color: white;
       font-family: Courier New, monospace;
@@ -389,8 +397,9 @@ ul.acquire-container {
     margin: 40px 0 40px 117px;
   }
 }
-.price {
-  font-weight: 700;
+.price, .title {
+  font-style: normal;
+  color: black;
 }
 #sent-overlay {
   top: 200px;
@@ -410,5 +419,43 @@ ul.acquire-container {
       font-weight: 700;
     }
   }
+}
+#added-overlay {
+  transition: 2s all ease-out;
+  -webkit-transition:2s all ease-out;
+  .ng-hide-add, .ng-hide-remove {
+    display: block !important;
+  }
+  .ng-hide-remove, .ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+  }
+  .ng-hide-add, .ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+
+  }
+
+  top: 300px;
+  position: absolute;
+  width: 100%;
+  > div {
+    //opacity: 0.9;
+    background-color: rgba(255,255,255, 0.9);
+    width: 550px;
+    margin: 0 auto;
+    padding: 53px 110px;
+  }
+  img, div div {
+    display: inline-block;
+    vertical-align: top;
+  }
+  img {
+    height: 110px;
+  }
+  .title {
+    font-weight: 700;
+
+  }
+
+
 }
 
