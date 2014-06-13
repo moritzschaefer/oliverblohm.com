@@ -66,8 +66,8 @@ angular.module('newOliverApp')
                 'images/a_tempo/perlensaue_oliverblohm_zink_carobruchmann_11.jpg',
                 'images/a_tempo/perlensaue_oliverblohm_zink_carobruchmann_12.jpg'
             ];
-    //$('.publications .gallery').hide();
-    /*$('.publications li> a:first-child').click(function(e){
+    $('.publications .gallery').hide();
+    $('.publications li> a:first-child').click(function(e){
         $('.publications li').removeClass('active');
         $(this).parent().toggleClass('active');
         if($(this).parent().find('.gallery').is(":visible") == true) {
@@ -77,5 +77,33 @@ angular.module('newOliverApp')
             $(this).parent().find('.gallery').slideToggle();
         }
         e.preventDefault();
-    });*/
+    });
+
+  $('.flexslider').flexslider({
+    //animation: "slide",
+    slideshow: false,
+    controlNav: true,
+    directionNav: true,
+    prevText: '<',
+    nextText: '>',
+    controlsContainer: 'flexslider',
+    after: function(slider) {
+      slider.find('.current_pos').text(slider.currentSlide+1);
+    },
+    start: function(slider) {
+      slider.find('.total').text("/ " + slider.count);
+    }
+  });
+
+  $('.slides').click(function(){
+    $(this).parent().flexslider("next");
+  });
+  $('.prev').click(function(e){
+    $(this).parent().parent().flexslider('prev');
+    e.preventDefault();
+  });
+  $('.next').click(function(e){
+    $(this).parent().parent().flexslider('next');
+    e.preventDefault();
+  });
 });
