@@ -22,10 +22,17 @@
     </form>
 
 </div>
-<div id="sent-overlay" ng-show="showOverlay">
+<div class="sent-overlay" ng-show="showSuccess" ng-cloak>
     <div>
         <p>YOUR REQUEST HAS BEEN SENT<br>------------------</p>
         <p>I WILL CONTACT YOU AS SOON AS POSSIBLE TO TALK ABOUT YOUR REQUEST!</p>
+        <p>YOURS,<br>OLIVER BLOHM</p>
+    </div>
+</div>
+<div class="sent-overlay" ng-show="showError" ng-cloak>
+    <div>
+        <p>THERE WAS AN ERROR<br>------------------</p>
+        <p>THE EMAIL COULD NOT BE DELIVERED. PLEASE CONTACT ME DIRECTLY.</p>
         <p>YOURS,<br>OLIVER BLOHM</p>
     </div>
 </div>

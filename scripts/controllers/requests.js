@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newOliverApp')
-.controller('RequestsCtrl', ["$scope", "requests", "$http", function ($scope, requests, $http) {
+.controller('RequestsCtrl', ["$scope", "requests", "$http", "$location", "$timeout", function ($scope, requests, $http, $location, $timeout) {
         $scope.showOverlay = false;
         $scope.$watch(function() {return requests.requests;}, function(newVal) {
             updateRequests();
@@ -29,9 +29,20 @@ angular.module('newOliverApp')
             });
 
             var data = {email: $scope.email, name: $scope.name, message: $scope.message, requests: requestsTexts.join("\n")};
-            $scope.showOverlay = true;
             // send email
-            $http({method: 'POST', url: '/backend/mailer.php', data: data});
+            $http({method: 'POST', url: '/backend/mailer.php', data: data}).success(function() {
+                $scope.showSuccess = true;
+                $timeout(function() {
+                    $scope.showSuccess = false;
+                    requests.deleteAll();
+                    $location.path("/acquire");
+                }, 2000);
+            }).error(function() {
+                $scope.showError = true;
+                $timeout(function() {
+                    $scope.showError = false;
+                }, 2000);
+            });
             // delete all requests
         }
 }]);

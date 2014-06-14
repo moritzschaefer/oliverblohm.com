@@ -19,6 +19,10 @@ angular.module('newOliverApp')
                 this.requests.splice(index, 1);
                 arrayToCookie(this.requests);
             },
+            deleteAll: function() {
+                this.requests = [];
+                arrayToCookie(this.requests);
+            },
             isRequested: function(id, requestOption) {
                 var found = this.requests.filter(function(obj) {
                     return obj.id === id && obj.requestOption === requestOption;

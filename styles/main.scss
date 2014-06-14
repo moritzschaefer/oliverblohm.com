@@ -402,7 +402,7 @@ ul.acquire-container {
   font-style: normal;
   color: black;
 }
-#sent-overlay {
+.sent-overlay {
   top: 200px;
   position: absolute;
   background-color: white;
@@ -485,4 +485,11 @@ ul.slides {
   border: none;
   outline: 0;
   text-decoration: none;
+  // disable selection
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
