@@ -269,26 +269,28 @@ p.contact_start {
 }
 /* shop-image */
 ul.acquire-container {
+  padding: 0;
   width: 900px;
   margin: 0 auto;
   list-style: none;
   li {
     display: inline-block;
     vertical-align: top;
-    width: 350px;
-    margin-bottom: 10px;
+    width: 300px;
+    margin-bottom: 30px;
     div {
       text-align: center;
       img {
         height: 300px;
       }
       p {
+        margin: 7px 0 0 0;
       }
     }
   }
 }
 .acquire-detail-container {
-  width: 1050px;
+  width: 900px;
   margin: 80px auto;
   ul {
     margin: 0;
@@ -330,13 +332,18 @@ ul.acquire-container {
   display: inline-block;
   vertical-align: top;
 }
+#acquire-detail-image {
+  max-width: 386px;
+}
+#acquire-detail-text {
+  max-width: 444px;
+}
 /* requests */
 #requests-content {
   width: 750px;
   margin: 0 auto;
   h2 {
     margin-bottom: 60px;
-    font-weight: 700;
   }
   ul {
     margin: 0;
@@ -375,6 +382,11 @@ ul.acquire-container {
     margin-right: 18px;
     vertical-align: top;
   }
+  form > div > p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+  }
   form {
     > div > p > span {
       float: right;
@@ -385,13 +397,19 @@ ul.acquire-container {
       color: white;
       font-family: Courier New, monospace;
       padding: 2px;
+      border-width: 1px;
     }
     textarea {
       //height: 90px;
+      border-width: 1px;
     }
     button  {
-      margin-left: 117px;
-      button: none;
+      border-width: 1px;
+      margin-left: 108px;
+      background-color: black;
+      color: white;
+      padding: 13px;
+      font-style: italic;
     }
   }
   > p {
@@ -448,6 +466,9 @@ ul.acquire-container {
   img, div div {
     display: inline-block;
     vertical-align: top;
+  }
+  div div {
+    margin-left: 14px;
   }
   img {
     height: 110px;
