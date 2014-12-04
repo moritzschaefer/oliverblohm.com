@@ -2,7 +2,7 @@
     <h2>LIST OF REQUESTS</h2>
     <ul>
         <li ng-repeat="request in requests">
-            <a href ng-click="deleteItem($index)">x DELETE FROM LIST</a>
+            <a href ng-click="deleteItem($index)">x anfrage löschen</a>
             <img ng-src="{{request.image}}"/>
             <div>
                 <h2 ng-bind="request.title"></h2>
@@ -12,13 +12,13 @@
             </div>
         </li>
     </ul>
-    <p>PLEASE LEAVE A MESSAGE<br>I WILL CONTACT YOU AS SOON AS POSSIBLE TO TALK ABOUT YOUR REQUEST!</p>
+    <p>ich werde mich schnellstmöglich auf ihre anfrage bei ihnen melden.</p>
     <form action="" method="get" accept-charset="utf-8">
         <div><p>NAME<span class="slash">/</span></p><input ng-model="name" type="text" id="name" name="name" required/></div>
-        <div><p>MAIL<span class="slash">/</span></p><input ng-model="email" type="email" id="email" name="email" required/></div>
-        <div><p>MESSAGE<span class="slash">/</span></p><textarea ng-model="message" rows="4" id="message" name="message" required></textarea></div>
+        <div><p>E-MAIL<span class="slash">/</span></p><input ng-model="email" type="email" id="email" name="email" required/></div>
+        <div><p>NACHRICHT<span class="slash">/</span></p><textarea ng-model="message" rows="4" id="message" name="message" required></textarea></div>
 
-        <p><button ng-click="sendRequest()">SEND REQUEST</button></p>
+        <p><button ng-click="sendRequest()">ANFRAGE SENDEN</BUTTON></P>
     </form>
 
 </div>
