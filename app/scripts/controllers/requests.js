@@ -43,12 +43,12 @@ angular.module('newOliverApp')
                     $scope.showSuccess = false;
                     requests.deleteAll();
                     $location.path("/acquire");
-                }, 2000);
+                }, 5000);
             }).error(function() {
                 $scope.showError = true;
                 $timeout(function() {
                     $scope.showError = false;
-                }, 2000);
+                }, 5000);
             });
             return true;
         }
