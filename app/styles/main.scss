@@ -305,7 +305,7 @@ ul.acquire-container {
   }
   #acquire-detail-text {
     margin-left: 60px;
-    a, .price {
+    a, .price, .title {
       font-weight: 700;
     }
   }
@@ -391,6 +391,9 @@ ul.acquire-container {
     > div > p > span {
       float: right;
     }
+    input[type="email"].error, textarea.error, input[type="text"].error {
+      background-color: #850000;
+    }
     input[type="email"], textarea, input[type="text"] {
       width: 620px;
       background-color: black;
@@ -403,7 +406,11 @@ ul.acquire-container {
       //height: 90px;
       border-width: 1px;
     }
+    button:hover {
+      cursor: pointer;
+    }
     button  {
+      font-size: 10pt;
       border-width: 1px;
       margin-left: 108px;
       background-color: black;
@@ -420,6 +427,10 @@ ul.acquire-container {
   font-style: normal;
   color: black;
 }
+.shipment {
+  font-style: normal;
+  color: gray;
+}
 .sent-overlay {
   top: 200px;
   position: absolute;
@@ -432,6 +443,7 @@ ul.acquire-container {
     padding-top: 100px;
     text-align: center;
     width: 850px;
+    border: 1px solid black;
     margin: 0 auto;
     p {
       color: black;
@@ -462,6 +474,7 @@ ul.acquire-container {
     width: 550px;
     margin: 0 auto;
     padding: 53px 110px;
+    border: 1px solid black
   }
   img, div div {
     display: inline-block;

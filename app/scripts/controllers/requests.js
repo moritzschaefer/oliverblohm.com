@@ -2,6 +2,7 @@
 
 angular.module('newOliverApp')
 .controller('RequestsCtrl', ["$scope", "requests", "$http", "$location", "$timeout", function ($scope, requests, $http, $location, $timeout) {
+        $scope.showValidation = false;
         $scope.showOverlay = false;
         $scope.$watch(function() {return requests.requests;}, function(newVal) {
             updateRequests();
@@ -21,6 +22,12 @@ angular.module('newOliverApp')
             updateRequests();
         }
         $scope.sendRequest = function() {
+            // validate form first
+            $scope.showValidation = true;
+            if(!$scope.requestForm.$valid) {
+              return;
+            }
+
             // prepare data
             var requestsTexts = requests.requests.map(function (element, index) {
                 return requests.selection[element.id].title + "\n" +
@@ -43,6 +50,6 @@ angular.module('newOliverApp')
                     $scope.showError = false;
                 }, 2000);
             });
-            // delete all requests
+            return true;
         }
 }]);

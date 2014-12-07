@@ -2,14 +2,15 @@
     <img ng-src="{{image}}" alt="all rights reserved by oliver blohm" id="acquire-detail-image"/>
     <div id="acquire-detail-text">
         <h2 ng-bind="title"></h2>
-        <p ng-bind="description"></p>
+        <p ng-bind-html="description"></p>
         <ul>
             <li ng-repeat="option in requestOptions">
                 <p class="title" ng-bind="option.title"></p>
                 <p>--------------------</p>
-                <p ng-bind="option.description"></p>
+                <p ng-bind-html="option.description"></p>
                 <p>---</p>
                 <p class="price" ng-bind="option.price"></p>
+                <p class="shipment" ng-bind-html="option.shipment"></p>
                 <p>---</p>
                 <a href ng-click="addRequest(id, $index)">zur bestellanfrage hinzufügen</a>
             </li>

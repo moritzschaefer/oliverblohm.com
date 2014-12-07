@@ -17,6 +17,6 @@ angular.module('newOliverApp')
         $scope.chosen = requests.requestOptions[requestOption].title;
         $timeout(function() {
             $scope.showOverlay = false;
-        }, 1800);
+        }, 4000);
     }
 });
